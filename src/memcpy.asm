@@ -5,7 +5,7 @@ memcpy:
 begin:
     cmp rdx, rcx
     je end
-    mov al, BYTE [rsi + rcx]
+    mov al, BYTE [rsi + rcx] ;; meme chose que le memset sauf que l'on copy du src[rcx] au dest[rcx]
     mov BYTE [rdi + rcx], al
     inc rcx
     jmp begin
