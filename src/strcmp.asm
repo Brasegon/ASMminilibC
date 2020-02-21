@@ -1,19 +1,20 @@
-    global strcmp:
+    global mystrcmp
     section .text
-strcmp:
-    mov r10b, BYTE[rdi]
-    mov r11b, BYTE[rsi]
-    cmp r10b, 0
+mystrcmp:
+    mov rax, 0 ;initialise la valeur de return a 0
+    mov rcx, 0 ;creé un index a 0
+begin:
+    movzx rax, BYTE [rdi + rcx]
+    movzx rbx, BYTE [rsi + rcx]
+    cmp rax, rbx
+    je increment
+increment:
+    cmp rax, 0
     je end
-    cmp r11b, 0
+    cmp rbx, 0
     je end
-    cmp r10b, r11b
-    jne end
-    inc rdi
-    inc rsi
-    jmp strcmp
+    inc rcx
+    jmp begin
 end:
-    movzx rax, r10b
-    movzx rbx, r11b
     sub rax, rbx
     ret

@@ -15,7 +15,7 @@ SRCS	=	./src/memset.asm \
 			./src/strlen.asm \
 			./src/strncmp.asm \
 			./src/memcpy.asm \
-			./src/strchr.asm
+			./src/strchr.asm \
 
 OBJS	=	$(SRCS:.asm=.o)
 

@@ -8,7 +8,7 @@ begin:
     mov al, BYTE [rsi + rcx] ;; meme chose que le memset sauf que l'on copy du src[rcx] au dest[rcx]
     mov BYTE [rdi + rcx], al
     inc rcx
+    mov rax, rdi
     jmp begin
 end:
-    mov rax, rdi
     ret
