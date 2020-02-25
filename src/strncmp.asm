@@ -1,6 +1,6 @@
-    global mystrncmp
+    global strncmp
     section .text
-mystrncmp:
+strncmp:
     mov rax, 0 ;initialise la valeur de return a 0
     mov rcx, 0 ;creé un index a 0
 begin:

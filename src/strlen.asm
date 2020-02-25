@@ -1,6 +1,6 @@
-    global mystrlen:
+    global strlen:
     section .text
-mystrlen:
+strlen:
     mov rax, 0 ; on initialise la variable rax a 0
 begin:
     cmp BYTE [rdi], 0 ; on compare si le char(8 bit == 1 octet) est == 0
