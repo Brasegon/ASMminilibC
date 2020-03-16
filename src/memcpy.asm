@@ -9,6 +9,5 @@ begin:
     mov BYTE [rdi + rcx], al
     inc rcx
     mov rax, rdi
-    jmp begin
 end:
     ret
